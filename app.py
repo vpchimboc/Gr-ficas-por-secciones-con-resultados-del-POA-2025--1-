@@ -32,11 +32,11 @@ st.markdown("Visualización interactiva de avances, metas y desempeño instituci
 # TARGETS INSTITUCIONALES (%)
 # --------------------------------------------------
 TARGETS = {
-    "POA Institucional": 90,
-    "Proyectos": 85,
-    "Unidades Administrativas": 88,
-    "Unidades Académicas": 88,
-    "Carreras": 85
+    "POA Institucional": 100,
+    "Proyectos": 100,
+    "Unidades Administrativas": 100,
+    "Unidades Académicas": 100,
+    "Direcciones de Carreras": 100
 }
 
 # --------------------------------------------------
@@ -74,7 +74,7 @@ def load_data():
     df_acad["PORCENTAJE DE AVANCE FINAL"] = df_acad["PORCENTAJE DE AVANCE FINAL"].apply(clean_pct)
 
     # Carreras
-    df_carr = pd.read_excel(xl, "CARRERAS", skiprows=3)
+    df_carr = pd.read_excel(xl, "DIRECCIONES DE CARRERAS", skiprows=3)
     df_carr = df_carr.iloc[:, [0, 19]]
     df_carr.columns = ["CARRERA", "AVANCE"]
     df_carr = df_carr.dropna(subset=["CARRERA"])
