@@ -36,7 +36,7 @@ TARGETS = {
     "Proyectos": 100,
     "Unidades Administrativas": 100,
     "Unidades Académicas": 100,
-    "Direcciones de Carreras": 100
+    "Carreras": 100
 }
 
 # --------------------------------------------------
