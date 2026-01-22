@@ -74,7 +74,7 @@ def load_data():
     df_acad["PORCENTAJE DE AVANCE FINAL"] = df_acad["PORCENTAJE DE AVANCE FINAL"].apply(clean_pct)
 
     # Carreras
-    df_carr = pd.read_excel(xl, "DIRECCIONES DE CARRERAS", skiprows=3)
+    df_carr = pd.read_excel(xl, "CARRERAS", skiprows=3)
     df_carr = df_carr.iloc[:, [0, 19]]
     df_carr.columns = ["CARRERA", "AVANCE"]
     df_carr = df_carr.dropna(subset=["CARRERA"])
